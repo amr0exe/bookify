@@ -6,6 +6,7 @@ import (
 	"github.com/amr0exe/bookify/internal/modules/auth"
 	"github.com/amr0exe/bookify/internal/modules/business"
 	"github.com/amr0exe/bookify/internal/modules/consumer"
+	"github.com/amr0exe/bookify/internal/modules/service"
 	"github.com/gin-gonic/gin"
 	"gorm.io/gorm"
 )
@@ -37,6 +38,13 @@ func SetUp(db *gorm.DB, cfg *config.Config) *gin.Engine {
 	bHandler := business.NewBusinessHandler(bService, responder, cfg.JWT_SECRET)
 
 	bHandler.RegisterRoute(api)
+
+	// business_service
+	sRepo := service.NewServiceRepository(db)
+	sService := service.NewServiceService(sRepo)
+	sHandler := service.NewServiceHandler(sService, responder, cfg.JWT_SECRET)
+
+	sHandler.RegisterRoute(api)
 
 	return r
 }

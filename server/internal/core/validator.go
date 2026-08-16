@@ -32,6 +32,14 @@ func formatValidationError(err error) map[string]string {
 				out[field] = "Must be between -180 and 180."
 			case "oneof":
 				out[field] = fmt.Sprintf("Must be one of: %s", fe.Param())
+			case "gt":
+				out[field] = fmt.Sprintf("Must be greater than %s", fe.Param())
+			case "gte":
+				out[field] = fmt.Sprintf("Must be greater than or equal to %s", fe.Param())
+			case "lt":
+				out[field] = fmt.Sprintf("Must be less than %s", fe.Param())
+			case "lte":
+				out[field] = fmt.Sprintf("Must be less than or equal to %s", fe.Param())
 			default:
 				out[field] = fmt.Sprintf("Failed validation on rule '%s'", fe.Tag())
 			}
