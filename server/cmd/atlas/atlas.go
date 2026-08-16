@@ -10,7 +10,14 @@ import (
 )
 
 func main() {
-	stmts, err := gormschema.New("postgres").Load(&models.Account{}, &models.Consumer{}, &models.Business{}, &models.RefreshToken{})
+	stmts, err := gormschema.New("postgres").
+		Load(
+			&models.Account{},
+			&models.Consumer{},
+			&models.Business{},
+			&models.RefreshToken{},
+			&models.Service{},
+		)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "failed to load schema: %v\n", err)
 		os.Exit(1)
