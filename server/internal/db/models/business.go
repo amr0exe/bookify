@@ -21,6 +21,7 @@ type Business struct {
 	Description string         `gorm:"type:text" json:"description,omitempty"`
 	Phone       string         `gorm:"type:varchar(50);not null" json:"phone"`
 	Address     string         `gorm:"type:text;not null" json:"address"`
+	Revenue     int64          `gorm:"type:bigint;not null;default:0;check:revenue >= 0" json:"revenue"`
 	Latitude    *float64       `gorm:"type:decimal(10,8)" json:"latitude,omitempty"`
 	Longitude   *float64       `gorm:"type:decimal(11,8)" json:"longitude,omitempty"`
 	Status      BusinessStatus `gorm:"type:varchar(20);not null;default:'OPEN'" json:"status"`
