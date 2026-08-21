@@ -1,7 +1,8 @@
-h1:wwcPrthTQSIbZYAediS/8e4o/dyqVIF4X73g9hYY07w=
+h1:KSsVJNPvfknnGpGsslJxxrqdcQ0CDtu8/Zi3xzH3MVE=
 20260803121859_create_account.sql h1:iDOr8uhceYz+Mf/8oUCBGQtC++v7r9dGY0+eryHg+aQ=
 20260803144227_create_business_consumer_profile.sql h1:4qHctMaNaxEHe8YTS4fUnMFqX6ozxuwYgINVAb5PiYA=
 20260805025128_fix_constraints_and_typos.sql h1:e++A2lqK/j8PpG8bBN/zwNvcKe5+lAsKmi4cHkWAN40=
 20260805171850_add_refresh_token_table.sql h1:nseBiG+bBlyZqKmXqOZJLl86YgCd0D3fbOBM79ALn/M=
 20260816071517_service_model_for_business.sql h1:UrfyQF2jPoumVOSgSUJKk0eyVhjoKR1IOJsAM6HM4XE=
 20260816083331_add_revenue_charge_field.sql h1:wQ3tJmmL0WtvfTLGyaWMD9qBHGLWVd6SIR9eM/VC0MU=
+20260821122353_add_appointment_model.sql h1:3xt9nZlrfrF7mOPnjx7yrVwIXOB6lha4gSmq8GKq3lk=

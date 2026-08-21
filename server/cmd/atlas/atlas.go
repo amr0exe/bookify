@@ -17,6 +17,7 @@ func main() {
 			&models.Business{},
 			&models.RefreshToken{},
 			&models.Service{},
+			&models.Appointment{},
 		)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "failed to load schema: %v\n", err)
